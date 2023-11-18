@@ -1,9 +1,8 @@
-package com.monkeydevcommunity.minio.configuration;
+package io.github.xitssky.minio.configuration;
 
-import com.monkeydevcommunity.minio.exception.BucketCreationException;
-import com.monkeydevcommunity.minio.exception.InvalidMinioConfigurationException;
-import com.monkeydevcommunity.minio.service.MinioService;
-import com.monkeydevcommunity.minio.service.MinioServiceImpl;
+import io.github.xitssky.minio.exception.BucketCreationException;
+import io.github.xitssky.minio.exception.InvalidMinioConfigurationException;
+import io.github.xitssky.minio.service.MinioService;
 import io.minio.BucketExistsArgs;
 import io.minio.MakeBucketArgs;
 import io.minio.MinioClient;
@@ -34,11 +33,11 @@ public class MinioAutoConfiguration {
 
     @Bean
     public MinioService minioService(MinioClient minioClient) {
-        return new MinioServiceImpl(minioClient);
+        return new MinioService(minioClient);
     }
 
     @Bean
-    public MinioClient minioClient() throws InvalidMinioConfigurationException, BucketCreationException{
+    public MinioClient minioClient() throws InvalidMinioConfigurationException, BucketCreationException {
         // Client builder
         final MinioClient.Builder minioClientBuilder = MinioClient.builder()
                 .endpoint(this.properties.getUrl())

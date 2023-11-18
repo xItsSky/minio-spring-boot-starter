@@ -1,4 +1,4 @@
-package com.monkeydevcommunity.minio.configuration;
+package io.github.xitssky.minio.configuration;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -24,7 +24,7 @@ public class MinioConfigurationProperties {
     /**
      * Is Proxy enabled
      */
-    private boolean enableProxy;
+    private boolean enableProxy = false;
 
     /**
      * The proxy type (to provide only if the proxy is enabled)
@@ -50,11 +50,6 @@ public class MinioConfigurationProperties {
      * The Minio secret key
      */
     private String secretKey;
-
-    /**
-     * The Minio bucket to use by default
-     */
-    private String defaultBucket;
 
     /**
      * The connection timeout

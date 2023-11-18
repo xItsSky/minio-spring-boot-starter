@@ -1,4 +1,4 @@
-package com.monkeydevcommunity.minio.exception;
+package io.github.xitssky.minio.exception;
 
 import java.text.MessageFormat;
 
