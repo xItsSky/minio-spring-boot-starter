@@ -8,6 +8,10 @@
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
+            <properties>
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.passphrase>${env.OSSRH_GPG_SECRET_KEY_PASSWORD}</gpg.passphrase>
+            </properties>
         </profile>
     </profiles>
     <servers>
