@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-java@3
         with:
           java-version: '17'
-          distribution: 'temarin'
+          distribution: 'corretto'
           server-id: ossrh
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
@@ -21,4 +21,4 @@ jobs:
         run: mvn --batch-mode deploy
         env:
           MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+          MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}

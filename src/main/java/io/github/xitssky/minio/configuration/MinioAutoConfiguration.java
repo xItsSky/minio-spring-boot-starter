@@ -25,7 +25,6 @@ import java.net.Proxy;
 @Slf4j
 @RequiredArgsConstructor
 @Configuration
-@ConditionalOnBean(MinioClient.class)
 @EnableConfigurationProperties(MinioConfigurationProperties.class)
 public class MinioAutoConfiguration {
 
