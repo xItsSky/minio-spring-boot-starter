@@ -1,4 +1,4 @@
-package io.github.xitssky.minio.configuration;
+package io.github.xitssky.minio.configuration.properties;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -34,12 +34,12 @@ public class MinioConfigurationProperties {
     /**
      * The proxy host (to provide only if the proxy is enabled)
      */
-    private String proxyHost;
+    private String proxyHost = null;
 
     /**
      * The proxy port (to provide only if the proxy is enabled)
      */
-    private String proxyPort;
+    private String proxyPort = null;
 
     /**
      * The Minio access key
@@ -74,5 +74,5 @@ public class MinioConfigurationProperties {
     /**
      * All the buckets
      */
-    private List<String> buckets;
+    private List<MinioBucket> buckets;
 }

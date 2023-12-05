@@ -13,6 +13,13 @@ import java.util.Map;
  * @author quentin
  */
 public interface MinioFileService {
+    /**
+     * Get the file information
+     * @param filename: the filename
+     * @param bucket:   the name of the bucket on which upload the file
+     * @return information as the {@link StatObjectResponse}
+     * @throws MinioRequestException if information request fail
+     */
     StatObjectResponse getFileInformation(String filename, String bucket) throws MinioRequestException;
 
     /**
